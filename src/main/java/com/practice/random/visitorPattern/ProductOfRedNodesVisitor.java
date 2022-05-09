@@ -1,4 +1,4 @@
-package com.hossain.practice.random.visitorPattern;
+package com.practice.random.visitorPattern;
 
 class ProductOfRedNodesVisitor extends TreeVis {
     private static long MODULO_FACTOR = ((long) Math.pow(10, 9) + 7);
