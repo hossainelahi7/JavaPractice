@@ -20,6 +20,11 @@ public class FindLeaves {
     private Map<Integer, List<Integer>> leaveMap;
 
     public List<List<Integer>> findLeaves(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        result.add(0, new ArrayList<>(root.val));
+
+
+
         leaveMap =  new HashMap<>();
         setHeight(root);
         return mapToList(leaveMap);
