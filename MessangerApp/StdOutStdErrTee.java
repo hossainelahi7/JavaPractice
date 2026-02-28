@@ -1,0 +1,46 @@
+/*
+ * **********************************************
+ * San Francisco State University
+ * CSC 220 -  Data Structures
+ * File Name: StdOutStdErrTee.java
+ * Author: Duc Ta
+ * Author: <First Name> <Last Name>
+ * **********************************************
+ */
+
+package assignment02PartB;
+// Please organize all the given files in 1 same package
+// Please make sure to read the provided "_ListOf-PleaseDoNotChange.txt"
+
+import java.io.OutputStream;
+
+public class StdOutStdErrTee extends OutputStream {
+
+    //
+    // Static Data Fields
+    //
+
+    //
+    // Instance Data Fields
+    //
+
+    //
+    // Constructors
+    //
+
+    //
+    // Instance Methods
+    //
+
+    //
+    // Additional Methods
+    //
+
+    //
+    // Language
+    //
+
+    //
+    // Override
+    //
+}
