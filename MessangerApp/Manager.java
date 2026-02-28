@@ -1,14 +1,13 @@
-/*
+package assignment02partB;/*
  * **********************************************
  * San Francisco State University
  * CSC 220 -  Data Structures
- * File Name: Manager.java
+ * File Name: assignment02partB.Manager.java
  * Author: Duc Ta
- * Author: <First Name> <Last Name>
+ * Author: Anika Hossain Sharna
  * **********************************************
  */
 
-package assignment02PartB;
 // Please organize all the given files in 1 same package
 // Please make sure to read the provided "_ListOf-PleaseDoNotChange.txt"
 
@@ -17,26 +16,18 @@ public final class Manager extends Person {
     //
     // Instance Data Fields
     //
-    private String name;
-    private int id;
 
     //
     // Constructors
     //
     public Manager() {
-        super();
     }
-
+    public Manager(String firstName, String lastName) {
+        super(firstName, lastName);
+    }
     //
     // Instance Methods
     //
-    public String speak(String message) {
-        return "[Manager]: " + message;
-    }
-    @Override
-    public void sayGreeting(String greeting) {
-        System.out.println("[Manager]: " + greeting);
-    }
 
     //
     // Language
@@ -45,4 +36,9 @@ public final class Manager extends Person {
     //
     // Override
     //
+    @Override
+    public void sayGreeting(String string) {
+
+        System.out.println(string);
+    }
 }

@@ -1,14 +1,13 @@
-/*
+package assignment02partB;/*
  * **********************************************
  * San Francisco State University
  * CSC 220 -  Data Structures
- * File Name: Greeting.java
+ * File Name: assignment02partB.Greeting.java
  * Author: Duc Ta
- * Author: <First Name> <Last Name>
+ * Author: Anika Hossain Sharna
  * **********************************************
  */
 
-package assignment02PartB;
 // Please organize all the given files in 1 same package
 // Please make sure to read the provided "_ListOf-PleaseDoNotChange.txt"
 

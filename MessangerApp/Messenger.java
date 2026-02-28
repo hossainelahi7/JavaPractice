@@ -4,24 +4,15 @@
  * CSC 220 -  Data Structures
  * File Name: Messenger.java
  * Author: Duc Ta
- * Author: <First Name> <Last Name>
+ * Author: Anika Hossain Sharna
  * **********************************************
  */
 
-package assignment02PartB;
+package assignment02partB;
 // Please organize all the given files in 1 same package
 // Please make sure to read the provided "_ListOf-PleaseDoNotChange.txt"
 
-
-//
-
 // Please DO NOT CHANGE this file.
-
-// Please DO NOT CHANGE this file.
-
-// Please DO NOT CHANGE this file.
-
-//
 
 public final class Messenger {
 
@@ -51,25 +42,23 @@ public final class Messenger {
     public static Config getConfig() {
         return Messenger.config;
     }
+
     private static void start() {
+        // Initializes the logging system and sets up user preferences
         Messenger.config.getStdOutStdErrTee().startLog();
         Messenger.config.setPreferences();
     }
+
     private static void chat() {
+        // Creates a new chat session using the default club and university
         (new ChatSession(Messenger.config.getClub(), Messenger.config.getUniversity())).runChatSession();
     }
+
     private static void stop() {
+        // Closes the logging streams
         Messenger.config.getStdOutStdErrTee().stopLog();
-        // LogFileDriver.run(); // Please temporarily uncomment this line to run LogFileDriver.
+
+        // Requirement: Temporarily uncomment this line to run assignment02partB.LogFileDriver once chat is working
+//         assignment02partB.LogFileDriver.run();
     }
 }
-
-//
-
-// Please DO NOT CHANGE this file.
-
-// Please DO NOT CHANGE this file.
-
-// Please DO NOT CHANGE this file.
-
-//

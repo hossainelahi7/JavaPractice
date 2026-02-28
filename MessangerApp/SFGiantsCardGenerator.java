@@ -10,28 +10,19 @@
  * CSC 220 -  Data Structures
  * File Name: SFGiantsCardGenerator.java
  * @author: Duc Ta
- * @author: <First Name> <Last Name>
+ * @author: Anika Hossain Sharna
  * *****************************************************************
  */
 
-package assignment02PartB;
-// Please organize all the given files in 1 same package
-// Please make sure to read the provided "_ListOf-PleaseDoNotChange.txt"
+package assignment02partB;
 
-import java.awt.Color;
 import java.awt.*;
+import java.awt.Color;
 import java.awt.image.BufferedImage;
 
 //
-
 // Please DO NOT CHANGE this file.
-
-// Please DO NOT CHANGE this file.
-
-// Please DO NOT CHANGE this file.
-
 //
-
 
 public final class SFGiantsCardGenerator {
     //
@@ -94,9 +85,7 @@ public final class SFGiantsCardGenerator {
     //
     // Additional Instance Methods
     //
-    // Find where the text baseline should be drawn so that the characters are within image
-    public static void generateSFGiantsCard(String recipient, String message, String senderFirstName, String senderEmail, char artSymbol, int artSize, String artFont) throws Exception {
-        // SF Giants Thank You
+    public static void generateSFGiantsCard(String recipient, String message, String senderFirstName, String senderEmail, char artSymbol, int artSize, String artFont)  {
         artSize = (artSize < 8) ? SFGiantsCardGenerator.ART_SIZE_SMALL : artSize;
         artFont = (artFont.isEmpty()) ? "Courier" : artFont;
         ASCIIArtFont.ART_FONT_SFSU.setFontArtFrontSFSU(artFont);
@@ -106,7 +95,11 @@ public final class SFGiantsCardGenerator {
         }
         System.out.printf("%-5s %n", "SF");
         System.out.printf("%-8s %-80s %-8s %n", "SF", "", "SF");
-        SFGiantsCardGenerator.printTextArt("Thank you <3", artSize, ASCIIArtFont.ART_FONT_SFSU, artSymbol);
+        try {
+            SFGiantsCardGenerator.printTextArt("Thank you <3", artSize, ASCIIArtFont.ART_FONT_SFSU, artSymbol);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         System.out.printf("%-8s %-80s %-8s %n", "SF", "", "SF");
         for (int i = 0; i < 5; i++) {
             System.out.printf("%-18s", "SF GIANTS - - - - ");
@@ -118,16 +111,16 @@ public final class SFGiantsCardGenerator {
         System.out.printf("%-8s %-80s %-5s %n", "SF", "Love,", "SF");
         System.out.printf("%-8s %-80s %-5s %n", "SF", senderFirstName, "SF");
         System.out.printf("%-8s %-80s %-8s %n", "SF", "", "SF");
+
+        // This line requires assignment02partB.Club.getOfficialSong() to be a STATIC method
         System.out.printf("%-8s %78s %-1s %-5s %n", "SF", senderEmail + " / " + Club.getOfficialSong(), "", "SF");
+
         for (int i = 0; i < 5; i++) {
             System.out.printf("%-18s", "SF GIANTS - - - - ");
         }
         System.out.printf("%-5s %n", "SF");
     }
 
-    // Prints ASCII art for the specified text. For size, you can use predefined
-    // sizes or a custom size. Usage -
-    // printTextArt("Hi",30,ASCIIArtFont.ART_FONT_SERIF,"@");
     private static void printTextArt(String artText, int textHeight, ASCIIArtFont fontType, char artSymbol) throws Exception {
         String fontName = fontType.getFont();
         int imageWidth = findImageWidth(textHeight, artText, fontName);
@@ -148,13 +141,10 @@ public final class SFGiantsCardGenerator {
             if (sb.toString().trim().isEmpty()) {
                 continue;
             }
-
-            // SF Giants
             System.out.printf("%-8s %-80s %-8s %n", "SF", sb, "SF");
         }
     }
 
-    // Using the Current font and current art text find the width of the full image
     private static int findImageWidth(int textHeight, String artText, String fontName) {
         BufferedImage im = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
         Graphics g = im.getGraphics();
@@ -162,7 +152,6 @@ public final class SFGiantsCardGenerator {
         return g.getFontMetrics().stringWidth(artText);
     }
 
-    // Find where the text baseline should be drawn so that the characters are within image
     private static int getBaselinePosition(Graphics g, Font font) {
         FontMetrics metrics = g.getFontMetrics(font);
         int y = metrics.getAscent() - metrics.getDescent();
@@ -170,7 +159,7 @@ public final class SFGiantsCardGenerator {
     }
 }
 
-//
+
 
 // Please DO NOT CHANGE this file.
 

@@ -1,14 +1,13 @@
-/*
+package assignment02partB;/*
  * **********************************************
  * San Francisco State University
  * CSC 220 -  Data Structures
- * File Name: LogFileDriver.java
+ * File Name: assignment02partB.LogFileDriver.java
  * Author: Duc Ta
- * Author: <First Name> <Last Name>
+ * Author: Anika Hossain Sharna
  * **********************************************
  */
 
-package assignment02PartB;
 // Please organize all the given files in 1 same package
 // Please make sure to read the provided "_ListOf-PleaseDoNotChange.txt"
 
@@ -43,7 +42,7 @@ public final class LogFileDriver {
         LogFileDriver.sleep(3);
         System.out.println();
         System.out.println("-".repeat(80));
-        System.out.println("-".repeat(10) + " LogFileDriver " + "-".repeat(10));
+        System.out.println("-".repeat(10) + " assignment02partB.LogFileDriver " + "-".repeat(10));
         System.out.println("-".repeat(10) + " checking log files ...");
         System.out.println("-".repeat(80));
 
@@ -69,7 +68,7 @@ public final class LogFileDriver {
         //
     }
     private static void readFile(String filePath) {
-        java.io.File file = new java.io.File(filePath);
+        File file = new File(filePath);
         try (Scanner input = new Scanner(file)) {
             while (input.hasNextLine()) {
                 System.out.println(input.nextLine());

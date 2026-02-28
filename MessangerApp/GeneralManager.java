@@ -4,11 +4,12 @@
  * CSC 220 -  Data Structures
  * File Name: GeneralManager.java
  * Author: Duc Ta
- * Author: <First Name> <Last Name>
+ * Author: Anika Hossain Sharna
  * **********************************************
  */
 
-package assignment02PartB;
+package assignment02partB;
+
 // Please organize all the given files in 1 same package
 // Please make sure to read the provided "_ListOf-PleaseDoNotChange.txt"
 
@@ -22,16 +23,15 @@ public final class GeneralManager extends Person {
     // Constructors
     //
     public GeneralManager() {
-        super();
+    }
+
+    public GeneralManager(String firstName, String lastName) {
+        super(firstName, lastName);
     }
 
     //
     // Instance Methods
     //
-    @Override
-    public void sayGreeting(String greeting) {
-        System.out.println("[GeneralManager]: " + greeting);
-    }
 
     //
     // Language
@@ -40,4 +40,10 @@ public final class GeneralManager extends Person {
     //
     // Override
     //
+
+
+    @Override
+    public void sayGreeting(String string) {
+        System.out.println(string);
+    }
 }
